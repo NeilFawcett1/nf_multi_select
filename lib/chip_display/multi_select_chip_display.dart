@@ -128,17 +128,17 @@ class MultiSelectChipDisplay<V> extends StatelessWidget {
 
   Widget _buildItem(MultiSelectItem<V> item, BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(0.0),
+      //main chip display area padding
+      padding: const EdgeInsets.all(2.0),
       child: ChoiceChip(
         shape: shape as OutlinedBorder?,
-        avatar: icon != null
-            ? Icon(
-                icon!.icon,
-                color: colorator != null && colorator!(item.value) != null
-                    ? colorator!(item.value)!.withOpacity(1)
-                    : icon!.color ?? Theme.of(context).primaryColor,
-              )
-            : null,
+        avatar: InkWell(
+          onTap: () {},
+        child: Icon(
+          Icons.close,
+          color:Colors.white,
+        ),
+      ),
         label: Container(
           width: chipWidth,
           child: Text(
