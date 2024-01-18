@@ -218,6 +218,7 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: widget.backgroundColor,
+      surfaceTintColor: widget.backgroundColor,
       title: widget.searchable == false
           ? widget.title ?? const Text("Select")
           : Row(
